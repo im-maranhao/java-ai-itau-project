@@ -15,6 +15,9 @@ public class PetMachine {
             System.out.println("Coloque o pet na máquina  para iniciar o banho.");
             return;
         }
+
+        this.water = 10;
+        this.shampoo -= 2;
         pet.setClean(true);
         System.out.println("O pet" + pet.getName() + "está limpo!");
     }
@@ -56,5 +59,20 @@ public class PetMachine {
             System.out.println("O pet " + this.pet.getName() + "está na máquina neste momento.");
             return;
         }
+    }
+
+    public void removePet(){
+       this.clean = this.pet.isClean();
+
+       this.pet = null;
+        System.out.println("O pet " + this.pet.getName() + "está  limpo");
+        this.pet = null;
+    }
+
+    public void wash(){
+        this.water -= 10;
+        this.shampoo -= 2;
+        this.clean = true;
+        System.out.println("A máquina está limpa!");
     }
 }
