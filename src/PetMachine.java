@@ -48,7 +48,11 @@ public class PetMachine {
     }
 
     public void setPet(Pet get){
-        if (this.pet != null){
+        if(!this.clean){
+            System.out.println("A máquina está suja, para colocar o pet é necessário limpá-la");
+            return;
+        }
+        if (hasPet()){
             System.out.println("O pet " + this.pet.getName() + "está na máquina neste momento.");
             return;
         }
