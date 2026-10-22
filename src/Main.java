@@ -1,15 +1,12 @@
 package src;
 
-import java.time.OffsetDateTime;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args){
 
-        var male = new Person();
+        var male = new Pet();
         male.name = "João";
         male.age = 12;
-        var female = new Person();
+        var female = new Pet();
         female.name = "Maria";
         female.age = 10;
         System.out.println("Male name: " + male.name + " age: " + male.age);
