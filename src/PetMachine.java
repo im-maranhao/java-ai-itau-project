@@ -2,11 +2,11 @@ package src;
 
 public class PetMachine {
 
-    private boolean  clean;
+    private boolean  clean = true;
 
-    private int water;
+    private int water = 30;
 
-    private int shampoo;
+    private int shampoo = 10;
 
     private Pet pet;
 
