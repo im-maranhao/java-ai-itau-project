@@ -8,28 +8,41 @@ public class Main {
 
     private final static PetMachine petMachine = new PetMachine();
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-      var option = -1;
+        var option = -1;
 
-      do {
-          System.out.println("=== Escolha uma das opções ===");
-          System.out.println("Dar banho no pet. ");
-          System.out.println("Abastecer a máquina com água. ");
-          System.out.println("Abastecer a máquina com shampoo. ");
-          System.out.println("Verifica nível de água.");
-          System.out.println("Verifica nível de shampoo.");
-          System.out.println("Verifica se tem pet no banho.");
-          System.out.println("Colocar Pet no banho.");
-          System.out.println("Retirar Pet na máquina.");
-          System.out.println("Limpar a máquina.");
-          option = scanner.nextInt();
+        do {
+            System.out.println("\n### Escolha uma das opções ###");
+            System.out.println("1 - Dar banho no pet.");
+            System.out.println("2 - Abastecer a máquina com água.");
+            System.out.println("3 - Abastecer a máquina com shampoo.");
+            System.out.println("4 - Verificar nível de água.");
+            System.out.println("5 - Verificar nível de shampoo.");
+            System.out.println("6 - Verificar se tem pet no banho.");
+            System.out.println("7 - Colocar pet no banho.");
+            System.out.println("8 - Retirar pet da máquina.");
+            System.out.println("9 - Limpar a máquina.");
+            System.out.println("0 - Sair.");
+            System.out.print("Escolha: ");
 
-          switch(option){
-              case 7 -> setPetInMachine();
-          }
-      }while(option != 0);
+            option = scanner.nextInt();
 
+            switch (option) {
+                case 1 -> petMachine.takeAShower();
+
+                case 7 -> setPetInMachine();
+
+                case 8 -> petMachine.removePet();
+
+                case 0 -> System.out.println("Saindo do sistema...");
+
+                default -> System.out.println("Opção inválida.");
+            }
+
+        } while (option != 0);
+
+        scanner.close();
     }
 
     public static void setPetInMachine(){
