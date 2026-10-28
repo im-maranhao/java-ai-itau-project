@@ -1,6 +1,4 @@
-package estruturas;
-
-import java.util.Scanner;
+package basic.estruturas;
 
 public class forPara {
 

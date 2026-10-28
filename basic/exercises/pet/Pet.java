@@ -1,4 +1,4 @@
-package src;
+package basic.exercises.pet;
 
 public class Pet {
 

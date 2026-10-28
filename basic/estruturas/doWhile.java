@@ -1,4 +1,4 @@
-package estruturas;
+package basic.estruturas;
 
 public class doWhile {
 

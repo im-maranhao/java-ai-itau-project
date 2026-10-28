@@ -1,7 +1,7 @@
 //Aprendendo como funciona as estruturas de controle em Java
 //Condicional: IF e ELSE
 
-package estruturas;
+package basic.estruturas;
 
 import java.time.OffsetDateTime;
 import java.util.Scanner;

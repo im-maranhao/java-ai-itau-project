@@ -1,4 +1,4 @@
-package estruturas;
+package basic.estruturas;
 
 import java.util.Scanner;
 
