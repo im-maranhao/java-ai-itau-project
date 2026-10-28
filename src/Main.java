@@ -15,7 +15,6 @@ public class Main {
         do {
             System.out.println("\n### Escolha uma das opções ###");
             System.out.println("1 - Dar banho no pet.");
-
             System.out.println("2 - Abastecer a máquina com água.");
             System.out.println("3 - Abastecer a máquina com shampoo.");
             System.out.println("4 - Verificar nível de água.");
