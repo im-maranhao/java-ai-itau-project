@@ -3,18 +3,30 @@ package src;
 public class Conta {
 
     private double saldoInicial;
+    //guarda o valor da abertura da conta
+
+    private double saldoAtual;
+    // guarda o valor disponível naquele momento
+
     private double chequeEspecial;
+    // guarda o limite calculado na abertur
 
     public Conta(double saldoInicial) {
-        Conta conta1 = new Conta(400.0);
-        Conta conta2 = new Conta(1000.0);
-
         this.saldoInicial = saldoInicial;
+        this.saldoAtual = saldoInicial;;
 
         if (saldoInicial <= 500) {
-            System.out.println("O valor do cheque é 50 reais");
+            chequeEspecial = 50.0;
         } else {
-            System.out.println("Se calcula dividindo em dois, 50% do saldo inicial. Resultando: " + saldoInicial / 2);
+           chequeEspecial = saldoInicial / 2;
         }
+    }
+
+    public double getChequeEspecial() {
+        return chequeEspecial;
+    }
+
+    public double getSaldoInicial() {
+        return saldoInicial;
     }
 }
