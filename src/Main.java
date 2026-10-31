@@ -8,8 +8,13 @@ public class Main {
         Conta conta1 = new Conta(400.0);
         Conta conta2 = new Conta(1000.0);
 
-        System.out.println(conta1.getChequeEspecial());
-        System.out.println(conta2.getChequeEspecial());
+        Conta conta = new Conta(1000.0);
+
+        conta.depositar(200);
+        conta.depositar(300);
+
+        System.out.println("Seu saldo atual é de: " + conta.getSaldoAtual());
+
     }
 
 

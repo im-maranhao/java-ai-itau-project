@@ -13,7 +13,7 @@ public class Conta {
 
     public Conta(double saldoInicial) {
         this.saldoInicial = saldoInicial;
-        this.saldoAtual = saldoInicial;;
+        this.saldoAtual = saldoInicial;
 
         if (saldoInicial <= 500) {
             chequeEspecial = 50.0;
@@ -28,5 +28,12 @@ public class Conta {
 
     public double getSaldoInicial() {
         return saldoInicial;
+    }
+    public double getSaldoAtual(){
+        return saldoAtual;
+    }
+
+    public void depositar(double valor){
+         this.saldoAtual +=  valor;
     }
 }
