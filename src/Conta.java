@@ -18,7 +18,7 @@ public class Conta {
         if (saldoInicial <= 500) {
             chequeEspecial = 50.0;
         } else {
-           chequeEspecial = saldoInicial / 2;
+            chequeEspecial = saldoInicial / 2;
         }
     }
 
@@ -29,20 +29,56 @@ public class Conta {
     public double getSaldoInicial() {
         return saldoInicial;
     }
-    public double getSaldoAtual(){
+
+    public double getSaldoAtual() {
         return saldoAtual;
     }
 
     public void depositar(double valor) {
-        this.saldoAtual += valor;
+
+        if (saldoAtual < 0) {
+
+            double valorUtilizado = getChequeEspecialUtilizado();
+
+            saldoAtual += valor;
+
+            if (saldoAtual >= 0) {
+                double taxa = valorUtilizado * 0.20;
+                saldoAtual -= taxa;
+
+                System.out.println("Taxa cobrada: " + taxa);
+            }
+
+        } else {
+            saldoAtual += valor;
+        }
+
+        System.out.println("Saldo atual: " + saldoAtual);
     }
 
-    public void sacar(double valorSaque){
-        if(valorSaque > saldoAtual + chequeEspecial){
+    public void sacar(double valorSaque) {
+        if (valorSaque > saldoAtual + chequeEspecial) {
             System.out.println("Saldo insuficiente, tente outro valor. ");
-        }else{
+        } else {
             saldoAtual -= valorSaque;
-            System.out.println("Saque disponível");
+            System.out.println("Saque realizado com sucesso!");
         }
+    }
+
+    public double getChequeEspecialUtilizado() {
+        if (saldoAtual < 0) {
+            double utilizado = Math.abs(saldoAtual);
+            return utilizado;
+        } else {
+            return 0;
+        }
+    }
+
+
+    public double calcularTaxa() {
+        double utilizado = getChequeEspecialUtilizado();
+        double taxa = utilizado * 0.20;
+        saldoAtual -= taxa;
+        return taxa;
     }
 }
