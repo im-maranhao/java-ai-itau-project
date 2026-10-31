@@ -15,6 +15,8 @@ public class Main {
 
         System.out.println("Seu saldo atual é de: " + conta.getSaldoAtual());
 
+
+        System.out.println("---------------");
     }
 
 

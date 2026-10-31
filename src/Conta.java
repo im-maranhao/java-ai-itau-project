@@ -9,7 +9,7 @@ public class Conta {
     // guarda o valor disponível naquele momento
 
     private double chequeEspecial;
-    // guarda o limite calculado na abertur
+    // guarda o limite calculado na abertura
 
     public Conta(double saldoInicial) {
         this.saldoInicial = saldoInicial;
@@ -33,7 +33,16 @@ public class Conta {
         return saldoAtual;
     }
 
-    public void depositar(double valor){
-         this.saldoAtual +=  valor;
+    public void depositar(double valor) {
+        this.saldoAtual += valor;
+    }
+
+    public void sacar(double valorSaque){
+        if(valorSaque > saldoAtual + chequeEspecial){
+            System.out.println("Saldo insuficiente, tente outro valor. ");
+        }else{
+            saldoAtual -= valorSaque;
+            System.out.println("Saque disponível");
+        }
     }
 }
