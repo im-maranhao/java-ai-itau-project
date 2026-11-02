@@ -1,6 +1,7 @@
 package src;
 
 import java.util.Scanner;
+import src.Operacoes;
 
 public class Main {
 
@@ -11,19 +12,19 @@ public class Main {
 //        conta.depositar(200);
 //        conta.depositar(300);
 
-        Conta conta = new Conta(1000.0);
+        Operacoes operacoes = new Operacoes(1000.0);
 
-        System.out.println("Seu saldo atual é de: " + conta.getSaldoAtual());
+        System.out.println("Seu saldo atual é de: " + operacoes.getSaldoAtual());
 
         System.out.println("---------------");
 
-        conta.sacar(1200);
+        operacoes.sacar(1200);
         System.out.println("---------------");
-        System.out.println("Seu saldo atual: " +  conta.getSaldoAtual());
+        System.out.println("Seu saldo atual: " +  operacoes.getSaldoAtual());
 
-        conta.depositar(200);
+        operacoes.depositar(200);
 
-        System.out.println(conta.calcularTaxa());
+        System.out.println(operacoes.calcularTaxa());
 
     }
 
