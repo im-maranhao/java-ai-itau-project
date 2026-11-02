@@ -1,2 +1,4 @@
-package src;public class Operacoes {
+package src;
+
+public class Operacoes {
 }
