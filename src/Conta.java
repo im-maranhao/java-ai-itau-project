@@ -33,7 +33,7 @@ public class Conta {
     public Conta() {
     this.name = "Miriam";
         this.cpf = "454.689.718-95";
-        this.tipoConta = tipoConta;
+        this.tipoConta = "Conta corrente";
     }
 
 }
