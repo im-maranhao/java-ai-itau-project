@@ -16,7 +16,6 @@ public class Main {
         System.out.println("---------------");
         System.out.println("Seu saldo atual: " + operacoes.getSaldoAtual());
 
-
         operacoes.depositar(200);
         operacoes.depositar(200);
         operacoes.depositar(300);
