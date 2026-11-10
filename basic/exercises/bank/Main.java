@@ -10,5 +10,12 @@ public class Main {
 //
         Operacoes operacoes = new Operacoes(1000.0);
 
-    }
+        System.out.println("Seu saldo atual é de: " + operacoes.getSaldoAtual());
 
+        System.out.println("---------------");
+
+        operacoes.sacar(1200);
+        System.out.println("---------------");
+        System.out.println("Seu saldo atual: " + operacoes.getSaldoAtual());
+    }
+}
