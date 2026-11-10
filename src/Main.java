@@ -1,7 +1,6 @@
 package src;
 
-import java.util.Scanner;
-import src.Operacoes;
+import basic.exercises.bank.Operacoes;
 
 public class Main {
 

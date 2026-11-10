@@ -1,4 +1,4 @@
-package src;
+package basic.exercises.bank;
 
 public class Operacoes {
 
